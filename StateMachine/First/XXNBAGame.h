@@ -12,20 +12,20 @@
 #import "XXEnumMacro.h"
 
 //状态枚举 - 买票. 进场. 看比赛 . 退场
-#define _EN_FSMState_Type(XX) \
-XX(StateBuyTicket, = 0x01) \
-XX(StateEnterGame, = 0x02) \
-XX(StateWatchGame, = 0x03) \
-XX(StateQuitGame, = 0x04)
-DECLARE_ENUM(EN_FSMState_Type, _EN_FSMState_Type)
+#define _XX_FSMState_Type(QQ) \
+QQ(XXStateBuyTicket, = 0x01) \
+QQ(XXStateEnterGame, = 0x02) \
+QQ(XXStateWatchGame, = 0x03) \
+QQ(XXStateQuitGame, = 0x04)
+DECLARE_ENUM(XX_FSMState_Type, _XX_FSMState_Type)
 
 //事件枚举 - 买票. 进场. 看比赛 . 退场
-#define _EN_FSMEvent_Type(XX) \
-XX(EventBuyTicket, = 0x01) \
-XX(EventEnterGame, = 0x02) \
-XX(EventWatchGame, = 0x03) \
-XX(EventQuitGame, = 0x04)
-DECLARE_ENUM(EN_FSMEvent_Type, _EN_FSMEvent_Type)
+#define _XX_FSMEvent_Type(QQ) \
+QQ(XXEventBuyTicket, = 0x01) \
+QQ(XXEventEnterGame, = 0x02) \
+QQ(XXEventWatchGame, = 0x03) \
+QQ(XXEventQuitGame, = 0x04)
+DECLARE_ENUM(XX_FSMEvent_Type, _XX_FSMEvent_Type)
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -34,14 +34,14 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  状态机当前的状态
  */
-@property(nonatomic, assign)EN_FSMState_Type state;
+@property(nonatomic, assign)XX_FSMState_Type state;
 
 /**
  条件事件触发处理
  
  @param event 事件来源
  */
-- (void)onHandleEvent:(EN_FSMEvent_Type) event;
+- (void)onHandleEvent:(XX_FSMEvent_Type) event;
 
 - (void)testAction1;
 

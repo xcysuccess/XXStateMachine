@@ -97,6 +97,11 @@
 		9A2537E021C2407E00C21431 /* XXEnumMacro.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A2537DF21C2407E00C21431 /* XXEnumMacro.m */; };
 		9A2537E321C24BC400C21431 /* XXNBAGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A2537E221C24BC400C21431 /* XXNBAGame.m */; };
 		9A2537E621C24E4000C21431 /* XXNBAGame+FSM.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A2537E521C24E4000C21431 /* XXNBAGame+FSM.m */; };
+		9A25380721C34CD100C21431 /* TKState.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A2537FF21C34CD100C21431 /* TKState.m */; };
+		9A25380821C34CD100C21431 /* TKTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A25380021C34CD100C21431 /* TKTransition.m */; };
+		9A25380921C34CD100C21431 /* TKEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A25380121C34CD100C21431 /* TKEvent.m */; };
+		9A25380A21C34CD100C21431 /* TKStateMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A25380221C34CD100C21431 /* TKStateMachine.m */; };
+		9A25380E21C34F8200C21431 /* YYNBAGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A25380D21C34F8200C21431 /* YYNBAGame.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -280,6 +285,17 @@
 		9A2537E221C24BC400C21431 /* XXNBAGame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXNBAGame.m; sourceTree = "<group>"; };
 		9A2537E421C24E4000C21431 /* XXNBAGame+FSM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XXNBAGame+FSM.h"; sourceTree = "<group>"; };
 		9A2537E521C24E4000C21431 /* XXNBAGame+FSM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "XXNBAGame+FSM.m"; sourceTree = "<group>"; };
+		9A2537FD21C34CD100C21431 /* TKState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKState.h; sourceTree = "<group>"; };
+		9A2537FE21C34CD100C21431 /* TKStateMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKStateMachine.h; sourceTree = "<group>"; };
+		9A2537FF21C34CD100C21431 /* TKState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKState.m; sourceTree = "<group>"; };
+		9A25380021C34CD100C21431 /* TKTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKTransition.m; sourceTree = "<group>"; };
+		9A25380121C34CD100C21431 /* TKEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKEvent.m; sourceTree = "<group>"; };
+		9A25380221C34CD100C21431 /* TKStateMachine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKStateMachine.m; sourceTree = "<group>"; };
+		9A25380421C34CD100C21431 /* TransitionKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionKit.h; sourceTree = "<group>"; };
+		9A25380521C34CD100C21431 /* TKEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKEvent.h; sourceTree = "<group>"; };
+		9A25380621C34CD100C21431 /* TKTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKTransition.h; sourceTree = "<group>"; };
+		9A25380C21C34F8200C21431 /* YYNBAGame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYNBAGame.h; sourceTree = "<group>"; };
+		9A25380D21C34F8200C21431 /* YYNBAGame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYNBAGame.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -312,8 +328,10 @@
 		9A2536BD21C2397D00C21431 /* StateMachine */ = {
 			isa = PBXGroup;
 			children = (
+				9A2537FB21C34CA900C21431 /* 3dParty */,
 				9A2537DD21C2406400C21431 /* Public */,
-				9A2537D621C23A6400C21431 /* Work */,
+				9A2537D621C23A6400C21431 /* First */,
+				9A25380B21C34D6800C21431 /* Second */,
 				9A2536D421C23A2000C21431 /* YYKit */,
 				9A2536BE21C2397D00C21431 /* AppDelegate.h */,
 				9A2536BF21C2397D00C21431 /* AppDelegate.m */,
@@ -595,7 +613,7 @@
 			path = Utility;
 			sourceTree = "<group>";
 		};
-		9A2537D621C23A6400C21431 /* Work */ = {
+		9A2537D621C23A6400C21431 /* First */ = {
 			isa = PBXGroup;
 			children = (
 				9A2537E121C24BC400C21431 /* XXNBAGame.h */,
@@ -603,7 +621,7 @@
 				9A2537E421C24E4000C21431 /* XXNBAGame+FSM.h */,
 				9A2537E521C24E4000C21431 /* XXNBAGame+FSM.m */,
 			);
-			path = Work;
+			path = First;
 			sourceTree = "<group>";
 		};
 		9A2537DD21C2406400C21431 /* Public */ = {
@@ -613,6 +631,39 @@
 				9A2537DF21C2407E00C21431 /* XXEnumMacro.m */,
 			);
 			path = Public;
+			sourceTree = "<group>";
+		};
+		9A2537FB21C34CA900C21431 /* 3dParty */ = {
+			isa = PBXGroup;
+			children = (
+				9A2537FC21C34CB700C21431 /* TransitionKit */,
+			);
+			path = 3dParty;
+			sourceTree = "<group>";
+		};
+		9A2537FC21C34CB700C21431 /* TransitionKit */ = {
+			isa = PBXGroup;
+			children = (
+				9A25380521C34CD100C21431 /* TKEvent.h */,
+				9A25380121C34CD100C21431 /* TKEvent.m */,
+				9A2537FD21C34CD100C21431 /* TKState.h */,
+				9A2537FF21C34CD100C21431 /* TKState.m */,
+				9A2537FE21C34CD100C21431 /* TKStateMachine.h */,
+				9A25380221C34CD100C21431 /* TKStateMachine.m */,
+				9A25380621C34CD100C21431 /* TKTransition.h */,
+				9A25380021C34CD100C21431 /* TKTransition.m */,
+				9A25380421C34CD100C21431 /* TransitionKit.h */,
+			);
+			path = TransitionKit;
+			sourceTree = "<group>";
+		};
+		9A25380B21C34D6800C21431 /* Second */ = {
+			isa = PBXGroup;
+			children = (
+				9A25380C21C34F8200C21431 /* YYNBAGame.h */,
+				9A25380D21C34F8200C21431 /* YYNBAGame.m */,
+			);
+			path = Second;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -740,6 +791,7 @@
 				9A2537A421C23A2000C21431 /* YYDiskCache.m in Sources */,
 				9A2537C721C23A2000C21431 /* YYTextUtilities.m in Sources */,
 				9A25379A21C23A2000C21431 /* UIDevice+YYAdd.m in Sources */,
+				9A25380A21C34CD100C21431 /* TKStateMachine.m in Sources */,
 				9A2537CE21C23A2000C21431 /* YYKeychain.m in Sources */,
 				9A25378A21C23A2000C21431 /* NSKeyedUnarchiver+YYAdd.m in Sources */,
 				9A2537BD21C23A2000C21431 /* YYTextMagnifier.m in Sources */,
@@ -753,12 +805,14 @@
 				9A2537B121C23A2000C21431 /* YYSpriteSheetImage.m in Sources */,
 				9A2537B321C23A2000C21431 /* YYWebImageOperation.m in Sources */,
 				9A2537B721C23A2000C21431 /* YYTextDebugOption.m in Sources */,
+				9A25380721C34CD100C21431 /* TKState.m in Sources */,
 				9A2537AA21C23A2000C21431 /* UIButton+YYWebImage.m in Sources */,
 				9A2537BF21C23A2000C21431 /* NSAttributedString+YYText.m in Sources */,
 				9A25379821C23A2000C21431 /* UIColor+YYAdd.m in Sources */,
 				9A2537C621C23A2000C21431 /* YYTextRunDelegate.m in Sources */,
 				9A25379B21C23A2000C21431 /* UIFont+YYAdd.m in Sources */,
 				9A2537A321C23A2000C21431 /* YYCache.m in Sources */,
+				9A25380821C34CD100C21431 /* TKTransition.m in Sources */,
 				9A2537E021C2407E00C21431 /* XXEnumMacro.m in Sources */,
 				9A2537A121C23A2000C21431 /* UITextField+YYAdd.m in Sources */,
 				9A2537A621C23A2000C21431 /* YYMemoryCache.m in Sources */,
@@ -768,10 +822,12 @@
 				9A2537CB21C23A2000C21431 /* YYDispatchQueuePool.m in Sources */,
 				9A2537AD21C23A2000C21431 /* YYFrameImage.m in Sources */,
 				9A25379321C23A2000C21431 /* CALayer+YYAdd.m in Sources */,
+				9A25380921C34CD100C21431 /* TKEvent.m in Sources */,
 				9A25379F21C23A2000C21431 /* UIScrollView+YYAdd.m in Sources */,
 				9A2537BB21C23A2000C21431 /* YYTextLayout.m in Sources */,
 				9A2537B921C23A2000C21431 /* YYTextInput.m in Sources */,
 				9A2537C321C23A2000C21431 /* YYTextAttribute.m in Sources */,
+				9A25380E21C34F8200C21431 /* YYNBAGame.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

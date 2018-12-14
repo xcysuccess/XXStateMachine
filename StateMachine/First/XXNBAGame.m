@@ -8,22 +8,22 @@
 
 #import "XXNBAGame.h"
 
-DEFINE_ENUM(EN_FSMState_Type,_EN_FSMState_Type)
-DEFINE_ENUM(EN_FSMEvent_Type,_EN_FSMEvent_Type)
+DEFINE_ENUM(XX_FSMState_Type,_XX_FSMState_Type)
+DEFINE_ENUM(XX_FSMEvent_Type,_XX_FSMEvent_Type)
 
 @implementation XXNBAGame
 
 -(instancetype)init{
     if(self = [super init]){
-        _state = StateBuyTicket;
+        _state = XXStateBuyTicket;
     }
     return self;
 }
 
--(void)setState:(EN_FSMState_Type)newstate{
+-(void)setState:(XX_FSMState_Type)newstate{
 
     //1.根据Enum可以转字符串的能力,然后动态去调用+category的方法
-    NSString *FSMFunctionName = [NSString stringWithFormat:@"FSM_%@_%@", NSStringFromEN_FSMState_Type(_state),NSStringFromEN_FSMState_Type(newstate)];
+    NSString *FSMFunctionName = [NSString stringWithFormat:@"FSM_%@_%@", NSStringFromXX_FSMState_Type(_state),NSStringFromXX_FSMState_Type(newstate)];
     
     //2.获取Sel
     SEL sel = NSSelectorFromString(FSMFunctionName);
@@ -52,12 +52,12 @@ DEFINE_ENUM(EN_FSMEvent_Type,_EN_FSMEvent_Type)
     NSLog(@"看比赛->退出比赛");
 }
 
--(void)onHandleEvent:(EN_FSMEvent_Type)event{
+-(void)onHandleEvent:(XX_FSMEvent_Type)event{
     switch (_state) {
-        case StateBuyTicket:{
+        case XXStateBuyTicket:{
             switch (event) {
-                case EventBuyTicket:{
-                    self.state = StateEnterGame;
+                case XXEventBuyTicket:{
+                    self.state = XXStateEnterGame;
                 }
                     break;
                 default:{
@@ -67,10 +67,10 @@ DEFINE_ENUM(EN_FSMEvent_Type,_EN_FSMEvent_Type)
             }
         }
             break;
-        case StateEnterGame:{
+        case XXStateEnterGame:{
             switch (event) {
-                case EventEnterGame:{
-                    self.state = StateWatchGame;
+                case XXEventEnterGame:{
+                    self.state = XXStateWatchGame;
                 }
                     break;
                 default:{
@@ -80,10 +80,10 @@ DEFINE_ENUM(EN_FSMEvent_Type,_EN_FSMEvent_Type)
             }
         }
             break;
-        case StateWatchGame:{
+        case XXStateWatchGame:{
             switch (event) {
-                case EventWatchGame:{
-                    self.state = StateQuitGame;
+                case XXEventWatchGame:{
+                    self.state = XXStateQuitGame;
                 }
                     break;
                 default:{
@@ -93,7 +93,7 @@ DEFINE_ENUM(EN_FSMEvent_Type,_EN_FSMEvent_Type)
             }
         }
             break;
-        case StateQuitGame:{
+        case XXStateQuitGame:{
             NSLog(@"退出之后不允许做任何事情!");
         }
             break;
