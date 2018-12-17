@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "XXNBAGame.h"
 #import "YYNBAGame.h"
+#import "ZZNBAGame.h"
 
 @interface ViewController ()
 
@@ -40,7 +41,8 @@
 }
 
 - (IBAction)onThirdButtonClick:(UIButton *)sender {
-    
+    ZZNBAGame *nbaGame = [ZZNBAGame new];
+    [nbaGame startZZState];
 }
 
 

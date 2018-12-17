@@ -8,8 +8,6 @@
 //  https://github.com/blakewatters/TransitionKit
 
 #import <Foundation/Foundation.h>
-
-
 #import "XXEnumMacro.h"
 
 //状态枚举 - 买票. 进场. 看比赛 . 退场
